@@ -1,0 +1,29 @@
+h1{
+    background-color: #043c63;
+}
+.form-control{
+    height: 80px;
+    border: none;
+    font-size: 20px;
+    padding-left: 40px;
+    border-bottom: 1px solid rgb(202, 196, 196);
+}
+.contenido{
+    background-color: #ddffff;
+    border-left: 6px solid #299af4;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 10px;
+}
+.btn-success{
+    background-color: #70ad47;
+    border: none;
+ 
+}
+.btn{
+    font-size: 35px;
+    font-weight:500;
+
+}
+button{
+    box-shadow: 10px 10px 10px  rgb(182, 180, 180);
+}
