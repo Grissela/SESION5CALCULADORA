@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, EventEmitter, OnInit,Output} from '@angular/core';
 
 @Component({
   selector: 'app-contenido',
@@ -9,36 +9,42 @@ export class ContenidoComponent implements OnInit {
 
   constructor() { }
 
+  @Output ()num1= new EventEmitter<string> ;
+  @Output ()num2=new EventEmitter<string>;
+  @Output ()resultado=new EventEmitter<number>;
+  res!:number;
 
-  num1!:string;
-  num2!:string;
-  resultado!:number;
-
+  
   suma(numero1:string, numero2:string){
-    this.num1=numero1;
-    this.num2=numero2;
-    this.resultado=Number(this.num1)+Number(this.num2);
+    this.num1.emit(numero1);
+    this.num2.emit(numero2);
+    this.res=Number(numero1)+Number(numero2);
+    this.resultado.emit(this.res);
+    
   }
 
   resta(numero1:string, numero2:string){
-    this.num1=numero1;
-    this.num2=numero2;
-    this.resultado=Number(this.num1)-Number(this.num2);
+    this.num1.emit(numero1);
+    this.num2.emit(numero2);
+    this.res=Number(numero1)-Number(numero2);
+    this.resultado.emit(this.res);
+    
   }
  
   multiplicacion(numero1:string, numero2:string){
-    this.num1=numero1;
-    this.num2=numero2;
-    this.resultado=Number(this.num1)*Number(this.num2);
+    this.num1.emit(numero1);
+    this.num2.emit(numero2);
+    this.res=Number(numero1)*Number(numero2);
+    this.resultado.emit(this.res);
+    
   }
 
   division(numero1:string, numero2:string){
-    this.num1=numero1;
-    this.num2=numero2;
-    this.resultado=Number(this.num1)/Number(this.num2);
-  }
-
-  
+    this.num1.emit(numero1);
+    this.num2.emit(numero2);
+    this.res=Number(numero1)/Number(numero2);
+    this.resultado.emit(this.res);
+      }
 
   ngOnInit(): void {
   }

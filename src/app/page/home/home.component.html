@@ -1,2 +1,7 @@
-<app-contenido></app-contenido>
-<app-footer></app-footer>
+<app-contenido (num1)="num1=$event" (num2)="num2=$event" (resultado)="resultado=$event"></app-contenido><!--Variable del hijo-->
+<div class="col-6 contenido">
+    <div class="">
+        <p class="text-center pt-5 h3 fw-normal">
+            Number 1 : {{ num1 }} Number  2 : {{ num2 }} = {{ resultado }} </p>
+    </div>
+</div>

@@ -9,7 +9,13 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  num1!:string;
+  num2!:string;
+  resultado!:number;
+
   ngOnInit(): void {
   }
+
+  
 
 }
